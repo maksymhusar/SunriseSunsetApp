@@ -9,21 +9,43 @@
 /* Begin PBXBuildFile section */
 		6A957886B330B150E9239166 /* Pods_SunriseSunsetApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C2CFAD7BFC02AD53CE6FDD5 /* Pods_SunriseSunsetApp.framework */; };
 		83E0CE7B20B2A4EE00FE711F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E0CE7A20B2A4EE00FE711F /* AppDelegate.swift */; };
-		83E0CE7D20B2A4EE00FE711F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E0CE7C20B2A4EE00FE711F /* ViewController.swift */; };
 		83E0CE8020B2A4EE00FE711F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83E0CE7E20B2A4EE00FE711F /* Main.storyboard */; };
 		83E0CE8220B2A4F000FE711F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83E0CE8120B2A4F000FE711F /* Assets.xcassets */; };
 		83E0CE8520B2A4F000FE711F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83E0CE8320B2A4F000FE711F /* LaunchScreen.storyboard */; };
+		83E0CE9420B2ADB400FE711F /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E0CE9320B2ADB400FE711F /* NetworkService.swift */; };
+		83E0CE9720B2ADF600FE711F /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E0CE9620B2ADF600FE711F /* Endpoint.swift */; };
+		83E0CE9920B2AE2500FE711F /* SunriseSunsetEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E0CE9820B2AE2500FE711F /* SunriseSunsetEndpoint.swift */; };
+		83E0CE9C20B2AF6800FE711F /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E0CE9B20B2AF6800FE711F /* Date+Extension.swift */; };
+		83E0CE9E20B2AF7300FE711F /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E0CE9D20B2AF7300FE711F /* String+Extension.swift */; };
+		83E0CEA020B2B0B800FE711F /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E0CE9F20B2B0B800FE711F /* Reachability.swift */; };
+		83E0CEA220B2B0CA00FE711F /* ResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E0CEA120B2B0CA00FE711F /* ResponseError.swift */; };
+		83E0CEA520B2B16900FE711F /* DayInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E0CEA420B2B16900FE711F /* DayInfo.swift */; };
+		83E0CEA720B2B57400FE711F /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E0CEA620B2B57400FE711F /* DataManager.swift */; };
+		83E0CEA920B2B97700FE711F /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E0CEA820B2B97700FE711F /* Parser.swift */; };
+		83E0CEAB20B2BB8D00FE711F /* MyDayInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E0CEAA20B2BB8D00FE711F /* MyDayInfoViewController.swift */; };
+		83E0CEAD20B2BCCA00FE711F /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E0CEAC20B2BCCA00FE711F /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6C2CFAD7BFC02AD53CE6FDD5 /* Pods_SunriseSunsetApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SunriseSunsetApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83E0CE7720B2A4EE00FE711F /* SunriseSunsetApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SunriseSunsetApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83E0CE7A20B2A4EE00FE711F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		83E0CE7C20B2A4EE00FE711F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		83E0CE7F20B2A4EE00FE711F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		83E0CE8120B2A4F000FE711F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		83E0CE8420B2A4F000FE711F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		83E0CE8620B2A4F000FE711F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83E0CE9320B2ADB400FE711F /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		83E0CE9620B2ADF600FE711F /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		83E0CE9820B2AE2500FE711F /* SunriseSunsetEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunriseSunsetEndpoint.swift; sourceTree = "<group>"; };
+		83E0CE9B20B2AF6800FE711F /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		83E0CE9D20B2AF7300FE711F /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		83E0CE9F20B2B0B800FE711F /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		83E0CEA120B2B0CA00FE711F /* ResponseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseError.swift; sourceTree = "<group>"; };
+		83E0CEA420B2B16900FE711F /* DayInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayInfo.swift; sourceTree = "<group>"; };
+		83E0CEA620B2B57400FE711F /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		83E0CEA820B2B97700FE711F /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		83E0CEAA20B2BB8D00FE711F /* MyDayInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDayInfoViewController.swift; sourceTree = "<group>"; };
+		83E0CEAC20B2BCCA00FE711F /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		C5E06087A6411032BFCD36EE /* Pods-SunriseSunsetApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SunriseSunsetApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-SunriseSunsetApp/Pods-SunriseSunsetApp.release.xcconfig"; sourceTree = "<group>"; };
 		CC6E6274CBADDF478CEA72BB /* Pods-SunriseSunsetApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SunriseSunsetApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SunriseSunsetApp/Pods-SunriseSunsetApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -78,14 +100,97 @@
 		83E0CE7920B2A4EE00FE711F /* SunriseSunsetApp */ = {
 			isa = PBXGroup;
 			children = (
-				83E0CE7A20B2A4EE00FE711F /* AppDelegate.swift */,
-				83E0CE7C20B2A4EE00FE711F /* ViewController.swift */,
-				83E0CE7E20B2A4EE00FE711F /* Main.storyboard */,
+				83E0CE8D20B2ACC700FE711F /* CoreLayer */,
+				83E0CE8F20B2AD0300FE711F /* BussinessLogicLayer */,
+				83E0CE8E20B2ACE000FE711F /* PresentationLayer */,
+				83E0CE9020B2AD3900FE711F /* ApplicationLayer */,
+			);
+			path = SunriseSunsetApp;
+			sourceTree = "<group>";
+		};
+		83E0CE8D20B2ACC700FE711F /* CoreLayer */ = {
+			isa = PBXGroup;
+			children = (
+				83E0CE9A20B2AF3400FE711F /* Extensions */,
+			);
+			path = CoreLayer;
+			sourceTree = "<group>";
+		};
+		83E0CE8E20B2ACE000FE711F /* PresentationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				83E0CE9120B2AD6600FE711F /* Controllers */,
+			);
+			path = PresentationLayer;
+			sourceTree = "<group>";
+		};
+		83E0CE8F20B2AD0300FE711F /* BussinessLogicLayer */ = {
+			isa = PBXGroup;
+			children = (
+				83E0CEA620B2B57400FE711F /* DataManager.swift */,
+				83E0CEAC20B2BCCA00FE711F /* LocationManager.swift */,
+				83E0CEA820B2B97700FE711F /* Parser.swift */,
+				83E0CEA320B2B11100FE711F /* Entities */,
+				83E0CE9220B2AD8F00FE711F /* NetworkLayer */,
+			);
+			path = BussinessLogicLayer;
+			sourceTree = "<group>";
+		};
+		83E0CE9020B2AD3900FE711F /* ApplicationLayer */ = {
+			isa = PBXGroup;
+			children = (
 				83E0CE8120B2A4F000FE711F /* Assets.xcassets */,
 				83E0CE8320B2A4F000FE711F /* LaunchScreen.storyboard */,
 				83E0CE8620B2A4F000FE711F /* Info.plist */,
+				83E0CE7A20B2A4EE00FE711F /* AppDelegate.swift */,
 			);
-			path = SunriseSunsetApp;
+			path = ApplicationLayer;
+			sourceTree = "<group>";
+		};
+		83E0CE9120B2AD6600FE711F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				83E0CE7E20B2A4EE00FE711F /* Main.storyboard */,
+				83E0CEAA20B2BB8D00FE711F /* MyDayInfoViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		83E0CE9220B2AD8F00FE711F /* NetworkLayer */ = {
+			isa = PBXGroup;
+			children = (
+				83E0CE9520B2ADE600FE711F /* Endpoints */,
+				83E0CE9320B2ADB400FE711F /* NetworkService.swift */,
+				83E0CE9F20B2B0B800FE711F /* Reachability.swift */,
+				83E0CEA120B2B0CA00FE711F /* ResponseError.swift */,
+			);
+			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
+		83E0CE9520B2ADE600FE711F /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+				83E0CE9620B2ADF600FE711F /* Endpoint.swift */,
+				83E0CE9820B2AE2500FE711F /* SunriseSunsetEndpoint.swift */,
+			);
+			path = Endpoints;
+			sourceTree = "<group>";
+		};
+		83E0CE9A20B2AF3400FE711F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				83E0CE9B20B2AF6800FE711F /* Date+Extension.swift */,
+				83E0CE9D20B2AF7300FE711F /* String+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		83E0CEA320B2B11100FE711F /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				83E0CEA420B2B16900FE711F /* DayInfo.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,8 +307,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83E0CE7D20B2A4EE00FE711F /* ViewController.swift in Sources */,
+				83E0CEA020B2B0B800FE711F /* Reachability.swift in Sources */,
+				83E0CEA920B2B97700FE711F /* Parser.swift in Sources */,
+				83E0CEA720B2B57400FE711F /* DataManager.swift in Sources */,
+				83E0CE9C20B2AF6800FE711F /* Date+Extension.swift in Sources */,
+				83E0CE9420B2ADB400FE711F /* NetworkService.swift in Sources */,
+				83E0CEA520B2B16900FE711F /* DayInfo.swift in Sources */,
+				83E0CE9720B2ADF600FE711F /* Endpoint.swift in Sources */,
+				83E0CEAB20B2BB8D00FE711F /* MyDayInfoViewController.swift in Sources */,
+				83E0CE9920B2AE2500FE711F /* SunriseSunsetEndpoint.swift in Sources */,
+				83E0CE9E20B2AF7300FE711F /* String+Extension.swift in Sources */,
 				83E0CE7B20B2A4EE00FE711F /* AppDelegate.swift in Sources */,
+				83E0CEA220B2B0CA00FE711F /* ResponseError.swift in Sources */,
+				83E0CEAD20B2BCCA00FE711F /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,8 +466,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9S67XZGB8L;
-				INFOPLIST_FILE = SunriseSunsetApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				INFOPLIST_FILE = "$(SRCROOT)/SunriseSunsetApp/ApplicationLayer/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.maksymhusar.SunriseSunsetApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -366,8 +485,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9S67XZGB8L;
-				INFOPLIST_FILE = SunriseSunsetApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				INFOPLIST_FILE = "$(SRCROOT)/SunriseSunsetApp/ApplicationLayer/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.maksymhusar.SunriseSunsetApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

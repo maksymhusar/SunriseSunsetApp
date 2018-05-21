@@ -6,5 +6,4 @@ target 'SunriseSunsetApp' do
   # Pods for SunriseSunsetApp
   pod 'Alamofire'
   pod 'SwiftyJSON'
-  
 end
