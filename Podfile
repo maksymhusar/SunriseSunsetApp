@@ -8,4 +8,5 @@ target 'SunriseSunsetApp' do
   pod 'SwiftyJSON'
   pod 'DateTimePicker'
   pod 'GooglePlaces'
+  pod 'TimeZoneLocate'
 end

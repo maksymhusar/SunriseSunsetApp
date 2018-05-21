@@ -15,9 +15,10 @@ enum DateFormat: String {
 }
 
 extension Date {
-    func toString(format: DateFormat = .dateWithoutTime) -> String {
+    func toString(format: DateFormat = .dateWithoutTime, timeZone: TimeZone = TimeZone.current) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = format.rawValue
+        dateFormatter.timeZone = timeZone
         return dateFormatter.string(from: self)
     }
 }

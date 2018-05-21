@@ -9,6 +9,7 @@
 import UIKit
 import GooglePlaces
 import DateTimePicker
+import TimeZoneLocate
 
 class SpecificCityDayInfoViewController: UIViewController, Alertable {
     
@@ -17,6 +18,7 @@ class SpecificCityDayInfoViewController: UIViewController, Alertable {
     @IBOutlet private weak var changeDateButton: UIButton!
     @IBOutlet private weak var dayInfoView: DayInfoView!
     @IBOutlet private weak var selectCityButton: UIButton!
+    @IBOutlet private weak var selectedCityTimezoneSwitch: UISwitch!
     
     private var selectedDate = Date() {
         didSet {
@@ -26,6 +28,9 @@ class SpecificCityDayInfoViewController: UIViewController, Alertable {
     }
     private var selectedPlace: GMSPlace? {
         didSet { loadInfoByDateAndPlace() }
+    }
+    private var currentInfo: DayInfo? {
+        didSet { setupTimeLabels() }
     }
     
     override func viewDidLoad() {
@@ -40,6 +45,7 @@ class SpecificCityDayInfoViewController: UIViewController, Alertable {
     
     // MARK: - Private methods
     private func loadInfoByDateAndPlace() {
+        currentInfo = nil
         let cityButtonTitle = selectedPlace?.name ?? "Select City"
         selectCityButton.setTitle(cityButtonTitle, for: .normal)
         dateLabel.text = selectedDate.toString()
@@ -49,9 +55,7 @@ class SpecificCityDayInfoViewController: UIViewController, Alertable {
             DataManager.instance.dayInfo(by: selectedPlace.coordinate, date: selectedDate) { [weak self] loadedInfo, error in
                 self?.activityIndicator.stopAnimating()
                 self?.changeDateButton.isHidden = false
-                let sunriseTitle = loadedInfo?.sunrise.toString(format: .timeOnly) ?? ""
-                let sunsetTitle = loadedInfo?.sunset.toString(format: .timeOnly) ?? ""
-                self?.dayInfoView.update(sunriseTime: sunriseTitle, sunsetTime: sunsetTitle)
+                self?.currentInfo = loadedInfo
                 if let error = error {
                     self?.showMessage(title: "Error", message: error.localizedDescription)
                 }
@@ -80,8 +84,21 @@ class SpecificCityDayInfoViewController: UIViewController, Alertable {
         present(autocompleteController, animated: true, completion: nil)
     }
     
-    @IBAction func selectCityPressed(_ sender: Any) {
+    @IBAction private func selectedCityTimezoneValueChanged(_ sender: UISwitch) {
+        setupTimeLabels()
+    }
+    
+    @IBAction private func selectCityPressed(_ sender: Any) {
         showCitySelectionScreen()
+    }
+    
+    private func setupTimeLabels() {
+        guard let coordinate = selectedPlace?.coordinate else { return }
+        let location = CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)
+        let timeZone = selectedCityTimezoneSwitch.isOn ? location.timeZone : TimeZone.current
+        let sunriseTitle = currentInfo?.sunrise.toString(format: .timeOnly, timeZone: timeZone) ?? ""
+        let sunsetTitle = currentInfo?.sunset.toString(format: .timeOnly, timeZone: timeZone) ?? ""
+        dayInfoView.update(sunriseTime: sunriseTitle, sunsetTime: sunsetTitle)
     }
     
     private func resetTimeLabels() {

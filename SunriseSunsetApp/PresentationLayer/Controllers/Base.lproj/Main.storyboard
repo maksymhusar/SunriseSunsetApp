@@ -27,7 +27,7 @@
                                 </constraints>
                             </imageView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="4wi-Kz-C8l">
-                                <rect key="frame" x="141.5" y="344" width="37" height="37"/>
+                                <rect key="frame" x="141.5" y="356" width="37" height="37"/>
                             </activityIndicatorView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XDI-N2-EhO">
                                 <rect key="frame" x="50" y="445" width="220" height="54"/>
@@ -45,7 +45,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJF-aD-T0E">
-                                <rect key="frame" x="20" y="401" width="280" height="24"/>
+                                <rect key="frame" x="20" y="407" width="280" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -67,11 +67,11 @@
                             <constraint firstItem="4I6-mg-16t" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Cjj-bs-tzp"/>
                             <constraint firstItem="4wi-Kz-C8l" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UK6-OU-KZW"/>
                             <constraint firstItem="4I6-mg-16t" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.5" id="Wpp-ix-Tn2"/>
-                            <constraint firstItem="XDI-N2-EhO" firstAttribute="top" secondItem="fJF-aD-T0E" secondAttribute="bottom" constant="20" id="ZkD-fK-DAk"/>
+                            <constraint firstItem="XDI-N2-EhO" firstAttribute="top" secondItem="fJF-aD-T0E" secondAttribute="bottom" constant="14" id="ZkD-fK-DAk"/>
                             <constraint firstItem="3Bf-G9-b07" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ikd-4f-IwA"/>
                             <constraint firstItem="XDI-N2-EhO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pjU-sp-lZm"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="XDI-N2-EhO" secondAttribute="bottom" constant="20" id="uYl-yv-WHZ"/>
-                            <constraint firstItem="fJF-aD-T0E" firstAttribute="top" secondItem="4wi-Kz-C8l" secondAttribute="bottom" constant="20" id="viP-th-HTf"/>
+                            <constraint firstItem="fJF-aD-T0E" firstAttribute="top" secondItem="4wi-Kz-C8l" secondAttribute="bottom" constant="14" id="viP-th-HTf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -125,7 +125,7 @@
                                 </constraints>
                             </view>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="xEF-sY-oYV">
-                                <rect key="frame" x="141.5" y="344" width="37" height="37"/>
+                                <rect key="frame" x="141.5" y="356" width="37" height="37"/>
                             </activityIndicatorView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YEk-6h-Ye9">
                                 <rect key="frame" x="50" y="445" width="220" height="54"/>
@@ -143,7 +143,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4F9-WJ-qdy">
-                                <rect key="frame" x="20" y="401" width="280" height="24"/>
+                                <rect key="frame" x="20" y="407" width="280" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -165,20 +165,37 @@
                                     <action selector="selectCityPressed:" destination="L6g-D7-n5c" eventType="touchUpInside" id="xFl-1g-OXq"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selected City Timezone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lN1-0X-4Kj">
+                                <rect key="frame" x="61.5" y="313.5" width="181.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="pYU-dT-Dtt">
+                                <rect key="frame" x="251" y="308" width="51" height="31"/>
+                                <color key="onTintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="selectedCityTimezoneValueChanged:" destination="L6g-D7-n5c" eventType="valueChanged" id="h7v-kq-Pks"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="4F9-WJ-qdy" firstAttribute="top" secondItem="xEF-sY-oYV" secondAttribute="bottom" constant="20" id="Fha-9q-Yjo"/>
+                            <constraint firstItem="1UR-rL-lv6" firstAttribute="trailing" secondItem="pYU-dT-Dtt" secondAttribute="trailing" constant="20" id="BAJ-zu-4r2"/>
+                            <constraint firstItem="4F9-WJ-qdy" firstAttribute="top" secondItem="xEF-sY-oYV" secondAttribute="bottom" constant="14" id="Fha-9q-Yjo"/>
                             <constraint firstItem="xEF-sY-oYV" firstAttribute="centerX" secondItem="QLr-oI-sfq" secondAttribute="centerX" id="Hys-as-ajM"/>
                             <constraint firstItem="jxB-hd-1wI" firstAttribute="top" secondItem="1UR-rL-lv6" secondAttribute="top" constant="20" id="JBM-GI-NnJ"/>
-                            <constraint firstItem="YEk-6h-Ye9" firstAttribute="top" secondItem="4F9-WJ-qdy" secondAttribute="bottom" constant="20" id="MYF-Rk-qev"/>
+                            <constraint firstItem="YEk-6h-Ye9" firstAttribute="top" secondItem="4F9-WJ-qdy" secondAttribute="bottom" constant="14" id="MYF-Rk-qev"/>
                             <constraint firstItem="YEk-6h-Ye9" firstAttribute="centerX" secondItem="QLr-oI-sfq" secondAttribute="centerX" id="PWL-DB-ydb"/>
+                            <constraint firstItem="pYU-dT-Dtt" firstAttribute="leading" secondItem="lN1-0X-4Kj" secondAttribute="trailing" constant="8" id="TwK-FG-lgu"/>
                             <constraint firstItem="1UR-rL-lv6" firstAttribute="trailing" secondItem="9Tm-33-sL3" secondAttribute="trailing" constant="20" id="WLI-bL-3cm"/>
                             <constraint firstItem="9Tm-33-sL3" firstAttribute="leading" secondItem="1UR-rL-lv6" secondAttribute="leading" constant="20" id="dEK-Cp-dYE"/>
                             <constraint firstItem="4F9-WJ-qdy" firstAttribute="leading" secondItem="1UR-rL-lv6" secondAttribute="leading" constant="20" id="dkd-XB-89i"/>
                             <constraint firstItem="jxB-hd-1wI" firstAttribute="centerX" secondItem="QLr-oI-sfq" secondAttribute="centerX" id="ily-c7-Kab"/>
                             <constraint firstItem="1UR-rL-lv6" firstAttribute="trailing" secondItem="4F9-WJ-qdy" secondAttribute="trailing" constant="20" id="lhy-Ho-9bS"/>
                             <constraint firstItem="1UR-rL-lv6" firstAttribute="bottom" secondItem="YEk-6h-Ye9" secondAttribute="bottom" constant="20" id="neW-le-vw2"/>
+                            <constraint firstItem="pYU-dT-Dtt" firstAttribute="top" secondItem="9Tm-33-sL3" secondAttribute="bottom" constant="8" id="rXa-km-dIg"/>
+                            <constraint firstItem="lN1-0X-4Kj" firstAttribute="centerY" secondItem="pYU-dT-Dtt" secondAttribute="centerY" id="t50-CF-rUz"/>
                             <constraint firstItem="9Tm-33-sL3" firstAttribute="centerY" secondItem="QLr-oI-sfq" secondAttribute="centerY" id="ts0-zR-98q"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1UR-rL-lv6"/>
@@ -193,6 +210,7 @@
                         <outlet property="dateLabel" destination="4F9-WJ-qdy" id="97G-Py-Dan"/>
                         <outlet property="dayInfoView" destination="9Tm-33-sL3" id="PKe-Jq-dB1"/>
                         <outlet property="selectCityButton" destination="jxB-hd-1wI" id="9Fm-Pq-miQ"/>
+                        <outlet property="selectedCityTimezoneSwitch" destination="pYU-dT-Dtt" id="SB1-MQ-gtA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gaL-Ug-hBa" userLabel="First Responder" sceneMemberID="firstResponder"/>
