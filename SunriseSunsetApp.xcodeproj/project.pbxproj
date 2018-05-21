@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6A957886B330B150E9239166 /* Pods_SunriseSunsetApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C2CFAD7BFC02AD53CE6FDD5 /* Pods_SunriseSunsetApp.framework */; };
+		8342144D20B2FD4C0022EF86 /* Alertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8342144C20B2FD4C0022EF86 /* Alertable.swift */; };
 		83A1482920B2E56D00653657 /* GlobalAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A1482820B2E56D00653657 /* GlobalAppearance.swift */; };
 		83A1482D20B2E7D500653657 /* DayInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A1482C20B2E7D500653657 /* DayInfoView.swift */; };
 		83A1482F20B2E82300653657 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A1482E20B2E82300653657 /* UIView+Extension.swift */; };
@@ -34,6 +35,7 @@
 
 /* Begin PBXFileReference section */
 		6C2CFAD7BFC02AD53CE6FDD5 /* Pods_SunriseSunsetApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SunriseSunsetApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8342144C20B2FD4C0022EF86 /* Alertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alertable.swift; sourceTree = "<group>"; };
 		83A1482820B2E56D00653657 /* GlobalAppearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalAppearance.swift; sourceTree = "<group>"; };
 		83A1482C20B2E7D500653657 /* DayInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayInfoView.swift; sourceTree = "<group>"; };
 		83A1482E20B2E82300653657 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
@@ -89,6 +91,14 @@
 				6C2CFAD7BFC02AD53CE6FDD5 /* Pods_SunriseSunsetApp.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8342144B20B2FD280022EF86 /* Protocolos */ = {
+			isa = PBXGroup;
+			children = (
+				8342144C20B2FD4C0022EF86 /* Alertable.swift */,
+			);
+			path = Protocolos;
 			sourceTree = "<group>";
 		};
 		83A1482720B2E56D00653657 /* Helpers */ = {
@@ -149,6 +159,7 @@
 		83E0CE8D20B2ACC700FE711F /* CoreLayer */ = {
 			isa = PBXGroup;
 			children = (
+				8342144B20B2FD280022EF86 /* Protocolos */,
 				83A1482720B2E56D00653657 /* Helpers */,
 				83E0CE9A20B2AF3400FE711F /* Extensions */,
 			);
@@ -382,6 +393,7 @@
 				83E0CEA520B2B16900FE711F /* DayInfo.swift in Sources */,
 				83E0CE9720B2ADF600FE711F /* Endpoint.swift in Sources */,
 				83E0CEAB20B2BB8D00FE711F /* LocationDayInfoViewController.swift in Sources */,
+				8342144D20B2FD4C0022EF86 /* Alertable.swift in Sources */,
 				83A1482920B2E56D00653657 /* GlobalAppearance.swift in Sources */,
 				83E0CE9920B2AE2500FE711F /* SunriseSunsetEndpoint.swift in Sources */,
 				83E0CE9E20B2AF7300FE711F /* String+Extension.swift in Sources */,
@@ -536,7 +548,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9S67XZGB8L;
 				INFOPLIST_FILE = "$(SRCROOT)/SunriseSunsetApp/ApplicationLayer/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.maksymhusar.SunriseSunsetApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -552,7 +567,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9S67XZGB8L;
 				INFOPLIST_FILE = "$(SRCROOT)/SunriseSunsetApp/ApplicationLayer/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.maksymhusar.SunriseSunsetApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

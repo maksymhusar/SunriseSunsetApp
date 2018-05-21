@@ -10,7 +10,7 @@ import UIKit
 import DateTimePicker
 import CoreLocation
 
-class LocationDayInfoViewController: UIViewController {
+class LocationDayInfoViewController: UIViewController, Alertable {
     
     @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
@@ -47,12 +47,15 @@ class LocationDayInfoViewController: UIViewController {
         changeDateButton.isHidden = true
         if let currentLocation = currentLocation {
             activityIndicator.startAnimating()
-            DataManager.instance.dayInfo(by: currentLocation, date: selectedDate) { [weak self] loadedInfo in
+            DataManager.instance.dayInfo(by: currentLocation, date: selectedDate) { [weak self] loadedInfo, error in
                 self?.activityIndicator.stopAnimating()
                 self?.changeDateButton.isHidden = false
                 let sunriseTitle = loadedInfo?.sunrise.toString(format: .timeOnly) ?? ""
                 let sunsetTitle = loadedInfo?.sunset.toString(format: .timeOnly) ?? ""
                 self?.dayInfoView.update(sunriseTime: sunriseTitle, sunsetTime: sunsetTitle)
+                if let error = error {
+                    self?.showMessage(title: "Error", message: error.localizedDescription)
+                }
             }
         } else {
             requestCurrentLocation()
@@ -79,6 +82,9 @@ class LocationDayInfoViewController: UIViewController {
             self?.activityIndicator.stopAnimating()
             if error == nil {
                 self?.currentLocation = LocationManager.instance.currentLocation
+            } else {
+                self?.showMessage(title: "Error", message:"Can't get your location. Check App Settings and try again")
+                self?.dayInfoView.update(sunriseTime: "Unknown", sunsetTime: "Unknown")
             }
         }
     }

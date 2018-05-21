@@ -9,7 +9,9 @@
 import UIKit
 import GooglePlaces
 import DateTimePicker
-class SpecificCityDayInfoViewController: UIViewController {
+
+class SpecificCityDayInfoViewController: UIViewController, Alertable {
+    
     @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet private weak var dateLabel: UILabel!
     @IBOutlet private weak var changeDateButton: UIButton!
@@ -44,12 +46,15 @@ class SpecificCityDayInfoViewController: UIViewController {
         changeDateButton.isHidden = true
         if let selectedPlace = selectedPlace {
             activityIndicator.startAnimating()
-            DataManager.instance.dayInfo(by: selectedPlace.coordinate, date: selectedDate) { [weak self] loadedInfo in
+            DataManager.instance.dayInfo(by: selectedPlace.coordinate, date: selectedDate) { [weak self] loadedInfo, error in
                 self?.activityIndicator.stopAnimating()
                 self?.changeDateButton.isHidden = false
                 let sunriseTitle = loadedInfo?.sunrise.toString(format: .timeOnly) ?? ""
                 let sunsetTitle = loadedInfo?.sunset.toString(format: .timeOnly) ?? ""
                 self?.dayInfoView.update(sunriseTime: sunriseTitle, sunsetTime: sunsetTitle)
+                if let error = error {
+                    self?.showMessage(title: "Error", message: error.localizedDescription)
+                }
             }
         } else {
             showCitySelectionScreen()
