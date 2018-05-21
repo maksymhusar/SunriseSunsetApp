@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		6A957886B330B150E9239166 /* Pods_SunriseSunsetApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C2CFAD7BFC02AD53CE6FDD5 /* Pods_SunriseSunsetApp.framework */; };
+		83A1482920B2E56D00653657 /* GlobalAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A1482820B2E56D00653657 /* GlobalAppearance.swift */; };
+		83A1482D20B2E7D500653657 /* DayInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A1482C20B2E7D500653657 /* DayInfoView.swift */; };
+		83A1482F20B2E82300653657 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A1482E20B2E82300653657 /* UIView+Extension.swift */; };
+		83A1483120B2E83800653657 /* DayInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83A1483020B2E83700653657 /* DayInfoView.xib */; };
+		83A1483320B2EAFA00653657 /* SpecificCityDayInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A1483220B2EAFA00653657 /* SpecificCityDayInfoViewController.swift */; };
+		83A1483520B2ED4A00653657 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A1483420B2ED4A00653657 /* Constants.swift */; };
 		83E0CE7B20B2A4EE00FE711F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E0CE7A20B2A4EE00FE711F /* AppDelegate.swift */; };
 		83E0CE8020B2A4EE00FE711F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83E0CE7E20B2A4EE00FE711F /* Main.storyboard */; };
 		83E0CE8220B2A4F000FE711F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83E0CE8120B2A4F000FE711F /* Assets.xcassets */; };
@@ -22,12 +28,18 @@
 		83E0CEA520B2B16900FE711F /* DayInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E0CEA420B2B16900FE711F /* DayInfo.swift */; };
 		83E0CEA720B2B57400FE711F /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E0CEA620B2B57400FE711F /* DataManager.swift */; };
 		83E0CEA920B2B97700FE711F /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E0CEA820B2B97700FE711F /* Parser.swift */; };
-		83E0CEAB20B2BB8D00FE711F /* MyDayInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E0CEAA20B2BB8D00FE711F /* MyDayInfoViewController.swift */; };
+		83E0CEAB20B2BB8D00FE711F /* LocationDayInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E0CEAA20B2BB8D00FE711F /* LocationDayInfoViewController.swift */; };
 		83E0CEAD20B2BCCA00FE711F /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E0CEAC20B2BCCA00FE711F /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6C2CFAD7BFC02AD53CE6FDD5 /* Pods_SunriseSunsetApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SunriseSunsetApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		83A1482820B2E56D00653657 /* GlobalAppearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalAppearance.swift; sourceTree = "<group>"; };
+		83A1482C20B2E7D500653657 /* DayInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayInfoView.swift; sourceTree = "<group>"; };
+		83A1482E20B2E82300653657 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		83A1483020B2E83700653657 /* DayInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DayInfoView.xib; sourceTree = "<group>"; };
+		83A1483220B2EAFA00653657 /* SpecificCityDayInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecificCityDayInfoViewController.swift; sourceTree = "<group>"; };
+		83A1483420B2ED4A00653657 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		83E0CE7720B2A4EE00FE711F /* SunriseSunsetApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SunriseSunsetApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83E0CE7A20B2A4EE00FE711F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83E0CE7F20B2A4EE00FE711F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -44,7 +56,7 @@
 		83E0CEA420B2B16900FE711F /* DayInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayInfo.swift; sourceTree = "<group>"; };
 		83E0CEA620B2B57400FE711F /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		83E0CEA820B2B97700FE711F /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
-		83E0CEAA20B2BB8D00FE711F /* MyDayInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDayInfoViewController.swift; sourceTree = "<group>"; };
+		83E0CEAA20B2BB8D00FE711F /* LocationDayInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDayInfoViewController.swift; sourceTree = "<group>"; };
 		83E0CEAC20B2BCCA00FE711F /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		C5E06087A6411032BFCD36EE /* Pods-SunriseSunsetApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SunriseSunsetApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-SunriseSunsetApp/Pods-SunriseSunsetApp.release.xcconfig"; sourceTree = "<group>"; };
 		CC6E6274CBADDF478CEA72BB /* Pods-SunriseSunsetApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SunriseSunsetApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SunriseSunsetApp/Pods-SunriseSunsetApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -79,6 +91,32 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		83A1482720B2E56D00653657 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				83A1482820B2E56D00653657 /* GlobalAppearance.swift */,
+				83A1483420B2ED4A00653657 /* Constants.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		83A1482A20B2E6C100653657 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				83A1482B20B2E7B800653657 /* DayInfoView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		83A1482B20B2E7B800653657 /* DayInfoView */ = {
+			isa = PBXGroup;
+			children = (
+				83A1482C20B2E7D500653657 /* DayInfoView.swift */,
+				83A1483020B2E83700653657 /* DayInfoView.xib */,
+			);
+			path = DayInfoView;
+			sourceTree = "<group>";
+		};
 		83E0CE6E20B2A4EE00FE711F = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +149,7 @@
 		83E0CE8D20B2ACC700FE711F /* CoreLayer */ = {
 			isa = PBXGroup;
 			children = (
+				83A1482720B2E56D00653657 /* Helpers */,
 				83E0CE9A20B2AF3400FE711F /* Extensions */,
 			);
 			path = CoreLayer;
@@ -119,6 +158,7 @@
 		83E0CE8E20B2ACE000FE711F /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
+				83A1482A20B2E6C100653657 /* Views */,
 				83E0CE9120B2AD6600FE711F /* Controllers */,
 			);
 			path = PresentationLayer;
@@ -151,7 +191,8 @@
 			isa = PBXGroup;
 			children = (
 				83E0CE7E20B2A4EE00FE711F /* Main.storyboard */,
-				83E0CEAA20B2BB8D00FE711F /* MyDayInfoViewController.swift */,
+				83E0CEAA20B2BB8D00FE711F /* LocationDayInfoViewController.swift */,
+				83A1483220B2EAFA00653657 /* SpecificCityDayInfoViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -181,6 +222,7 @@
 			children = (
 				83E0CE9B20B2AF6800FE711F /* Date+Extension.swift */,
 				83E0CE9D20B2AF7300FE711F /* String+Extension.swift */,
+				83A1482E20B2E82300653657 /* UIView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -205,6 +247,7 @@
 				83E0CE7420B2A4EE00FE711F /* Frameworks */,
 				83E0CE7520B2A4EE00FE711F /* Resources */,
 				284B85BBE8B4B3C586B8B3A5 /* [CP] Embed Pods Frameworks */,
+				AA62C12F5C2C69F731E060FD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -254,6 +297,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				83E0CE8520B2A4F000FE711F /* LaunchScreen.storyboard in Resources */,
+				83A1483120B2E83800653657 /* DayInfoView.xib in Resources */,
 				83E0CE8220B2A4F000FE711F /* Assets.xcassets in Resources */,
 				83E0CE8020B2A4EE00FE711F /* Main.storyboard in Resources */,
 			);
@@ -302,6 +346,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		AA62C12F5C2C69F731E060FD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SunriseSunsetApp/Pods-SunriseSunsetApp-resources.sh",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SunriseSunsetApp/Pods-SunriseSunsetApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -309,19 +371,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83A1482D20B2E7D500653657 /* DayInfoView.swift in Sources */,
 				83E0CEA020B2B0B800FE711F /* Reachability.swift in Sources */,
+				83A1483320B2EAFA00653657 /* SpecificCityDayInfoViewController.swift in Sources */,
+				83A1482F20B2E82300653657 /* UIView+Extension.swift in Sources */,
 				83E0CEA920B2B97700FE711F /* Parser.swift in Sources */,
 				83E0CEA720B2B57400FE711F /* DataManager.swift in Sources */,
 				83E0CE9C20B2AF6800FE711F /* Date+Extension.swift in Sources */,
 				83E0CE9420B2ADB400FE711F /* NetworkService.swift in Sources */,
 				83E0CEA520B2B16900FE711F /* DayInfo.swift in Sources */,
 				83E0CE9720B2ADF600FE711F /* Endpoint.swift in Sources */,
-				83E0CEAB20B2BB8D00FE711F /* MyDayInfoViewController.swift in Sources */,
+				83E0CEAB20B2BB8D00FE711F /* LocationDayInfoViewController.swift in Sources */,
+				83A1482920B2E56D00653657 /* GlobalAppearance.swift in Sources */,
 				83E0CE9920B2AE2500FE711F /* SunriseSunsetEndpoint.swift in Sources */,
 				83E0CE9E20B2AF7300FE711F /* String+Extension.swift in Sources */,
 				83E0CE7B20B2A4EE00FE711F /* AppDelegate.swift in Sources */,
 				83E0CEA220B2B0CA00FE711F /* ResponseError.swift in Sources */,
 				83E0CEAD20B2BCCA00FE711F /* LocationManager.swift in Sources */,
+				83A1483520B2ED4A00653657 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,10 +536,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9S67XZGB8L;
 				INFOPLIST_FILE = "$(SRCROOT)/SunriseSunsetApp/ApplicationLayer/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.maksymhusar.SunriseSunsetApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -488,10 +552,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9S67XZGB8L;
 				INFOPLIST_FILE = "$(SRCROOT)/SunriseSunsetApp/ApplicationLayer/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.maksymhusar.SunriseSunsetApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

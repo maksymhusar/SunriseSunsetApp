@@ -11,53 +11,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--My Day Info View Controller-->
+        <!--Location Day Info View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MyDayInfoViewController" customModule="SunriseSunsetApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LocationDayInfoViewController" customModule="SunriseSunsetApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZCa-0g-zWh">
-                                <rect key="frame" x="20" y="204.5" width="280" height="110"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="EwI-LM-CU4">
-                                        <rect key="frame" x="0.0" y="0.0" width="280" height="50"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sunrise:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EDw-iz-2Gk">
-                                                <rect key="frame" x="0.0" y="0.0" width="135" height="50"/>
-                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QdF-vv-qWh">
-                                                <rect key="frame" x="145" y="0.0" width="135" height="50"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3Si-Ph-dJ2">
-                                        <rect key="frame" x="0.0" y="60" width="280" height="50"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sunset:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mKq-ym-mwe">
-                                                <rect key="frame" x="0.0" y="0.0" width="135" height="50"/>
-                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rOA-g7-SIG">
-                                                <rect key="frame" x="145" y="0.0" width="135" height="50"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                            </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash" translatesAutoresizingMaskIntoConstraints="NO" id="4I6-mg-16t">
                                 <rect key="frame" x="100" y="70" width="120" height="120"/>
                                 <constraints>
@@ -66,10 +27,10 @@
                                 </constraints>
                             </imageView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="4wi-Kz-C8l">
-                                <rect key="frame" x="141.5" y="374" width="37" height="37"/>
+                                <rect key="frame" x="141.5" y="344" width="37" height="37"/>
                             </activityIndicatorView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XDI-N2-EhO">
-                                <rect key="frame" x="50" y="455" width="220" height="54"/>
+                                <rect key="frame" x="50" y="445" width="220" height="54"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="220" id="wpD-bR-DDK"/>
@@ -84,26 +45,33 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJF-aD-T0E">
-                                <rect key="frame" x="20" y="421" width="280" height="24"/>
+                                <rect key="frame" x="20" y="401" width="280" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Bf-G9-b07" customClass="DayInfoView" customModule="SunriseSunsetApp" customModuleProvider="target">
+                                <rect key="frame" x="20" y="219.5" width="280" height="80"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="R5S-gg-S0e"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZCa-0g-zWh" secondAttribute="trailing" constant="20" id="5Fx-EP-IVY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3Bf-G9-b07" secondAttribute="trailing" constant="20" id="1HS-7k-osr"/>
+                            <constraint firstItem="3Bf-G9-b07" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="5SY-kp-7Aq"/>
                             <constraint firstItem="fJF-aD-T0E" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="7KP-Zh-jch"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fJF-aD-T0E" secondAttribute="trailing" constant="20" id="7qc-fG-pPA"/>
                             <constraint firstItem="4I6-mg-16t" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Cjj-bs-tzp"/>
                             <constraint firstItem="4wi-Kz-C8l" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UK6-OU-KZW"/>
                             <constraint firstItem="4I6-mg-16t" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.5" id="Wpp-ix-Tn2"/>
-                            <constraint firstItem="XDI-N2-EhO" firstAttribute="top" secondItem="fJF-aD-T0E" secondAttribute="bottom" constant="10" id="ZkD-fK-DAk"/>
+                            <constraint firstItem="XDI-N2-EhO" firstAttribute="top" secondItem="fJF-aD-T0E" secondAttribute="bottom" constant="20" id="ZkD-fK-DAk"/>
+                            <constraint firstItem="3Bf-G9-b07" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ikd-4f-IwA"/>
                             <constraint firstItem="XDI-N2-EhO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pjU-sp-lZm"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="XDI-N2-EhO" secondAttribute="bottom" constant="10" id="uYl-yv-WHZ"/>
-                            <constraint firstItem="fJF-aD-T0E" firstAttribute="top" secondItem="4wi-Kz-C8l" secondAttribute="bottom" constant="10" id="viP-th-HTf"/>
-                            <constraint firstItem="ZCa-0g-zWh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="wxl-LU-rhD"/>
-                            <constraint firstItem="ZCa-0g-zWh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="zCi-7f-ta1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="XDI-N2-EhO" secondAttribute="bottom" constant="20" id="uYl-yv-WHZ"/>
+                            <constraint firstItem="fJF-aD-T0E" firstAttribute="top" secondItem="4wi-Kz-C8l" secondAttribute="bottom" constant="20" id="viP-th-HTf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -115,9 +83,8 @@
                         <outlet property="activityIndicator" destination="4wi-Kz-C8l" id="41O-TF-knA"/>
                         <outlet property="changeDateButton" destination="XDI-N2-EhO" id="GCf-vs-q65"/>
                         <outlet property="dateLabel" destination="fJF-aD-T0E" id="yCK-Ku-wyw"/>
+                        <outlet property="dayInfoView" destination="3Bf-G9-b07" id="qHv-AN-yBH"/>
                         <outlet property="logoImageView" destination="4I6-mg-16t" id="mwy-Uw-JfA"/>
-                        <outlet property="sunriseTimeLabel" destination="QdF-vv-qWh" id="7gP-yl-6K5"/>
-                        <outlet property="sunsetTimeLabel" destination="rOA-g7-SIG" id="X2Y-vF-SdK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -132,8 +99,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="228-eg-nUD"/>
@@ -144,24 +109,95 @@
             </objects>
             <point key="canvasLocation" x="-503" y="12"/>
         </scene>
-        <!--View Controller-->
+        <!--Specific City Day Info View Controller-->
         <scene sceneID="ZhL-OM-oYY">
             <objects>
-                <viewController id="L6g-D7-n5c" sceneMemberID="viewController">
+                <viewController id="L6g-D7-n5c" customClass="SpecificCityDayInfoViewController" customModule="SunriseSunsetApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QLr-oI-sfq">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Tm-33-sL3" customClass="DayInfoView" customModule="SunriseSunsetApp" customModuleProvider="target">
+                                <rect key="frame" x="20" y="220" width="280" height="80"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="6hu-bq-1cy"/>
+                                </constraints>
+                            </view>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="xEF-sY-oYV">
+                                <rect key="frame" x="141.5" y="344" width="37" height="37"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YEk-6h-Ye9">
+                                <rect key="frame" x="50" y="445" width="220" height="54"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="220" id="GYE-MI-DIr"/>
+                                    <constraint firstAttribute="height" constant="54" id="qlx-6S-5uv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="CHANGE DATE">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeDatePressed:" destination="L6g-D7-n5c" eventType="touchUpInside" id="c66-ib-f9C"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4F9-WJ-qdy">
+                                <rect key="frame" x="20" y="401" width="280" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jxB-hd-1wI">
+                                <rect key="frame" x="50" y="40" width="220" height="54"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="8Rv-R9-2vW"/>
+                                    <constraint firstAttribute="width" constant="220" id="CXU-WB-knQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
+                                <state key="normal" title="Select City" image="city_icon">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectCityPressed:" destination="L6g-D7-n5c" eventType="touchUpInside" id="xFl-1g-OXq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="4F9-WJ-qdy" firstAttribute="top" secondItem="xEF-sY-oYV" secondAttribute="bottom" constant="20" id="Fha-9q-Yjo"/>
+                            <constraint firstItem="xEF-sY-oYV" firstAttribute="centerX" secondItem="QLr-oI-sfq" secondAttribute="centerX" id="Hys-as-ajM"/>
+                            <constraint firstItem="jxB-hd-1wI" firstAttribute="top" secondItem="1UR-rL-lv6" secondAttribute="top" constant="20" id="JBM-GI-NnJ"/>
+                            <constraint firstItem="YEk-6h-Ye9" firstAttribute="top" secondItem="4F9-WJ-qdy" secondAttribute="bottom" constant="20" id="MYF-Rk-qev"/>
+                            <constraint firstItem="YEk-6h-Ye9" firstAttribute="centerX" secondItem="QLr-oI-sfq" secondAttribute="centerX" id="PWL-DB-ydb"/>
+                            <constraint firstItem="1UR-rL-lv6" firstAttribute="trailing" secondItem="9Tm-33-sL3" secondAttribute="trailing" constant="20" id="WLI-bL-3cm"/>
+                            <constraint firstItem="9Tm-33-sL3" firstAttribute="leading" secondItem="1UR-rL-lv6" secondAttribute="leading" constant="20" id="dEK-Cp-dYE"/>
+                            <constraint firstItem="4F9-WJ-qdy" firstAttribute="leading" secondItem="1UR-rL-lv6" secondAttribute="leading" constant="20" id="dkd-XB-89i"/>
+                            <constraint firstItem="jxB-hd-1wI" firstAttribute="centerX" secondItem="QLr-oI-sfq" secondAttribute="centerX" id="ily-c7-Kab"/>
+                            <constraint firstItem="1UR-rL-lv6" firstAttribute="trailing" secondItem="4F9-WJ-qdy" secondAttribute="trailing" constant="20" id="lhy-Ho-9bS"/>
+                            <constraint firstItem="1UR-rL-lv6" firstAttribute="bottom" secondItem="YEk-6h-Ye9" secondAttribute="bottom" constant="20" id="neW-le-vw2"/>
+                            <constraint firstItem="9Tm-33-sL3" firstAttribute="centerY" secondItem="QLr-oI-sfq" secondAttribute="centerY" id="ts0-zR-98q"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="1UR-rL-lv6"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="city_icon" id="4Dy-E0-5EL">
                         <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
                         <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="activityIndicator" destination="xEF-sY-oYV" id="FkM-jw-i7V"/>
+                        <outlet property="changeDateButton" destination="YEk-6h-Ye9" id="Tab-I5-eEa"/>
+                        <outlet property="dateLabel" destination="4F9-WJ-qdy" id="97G-Py-Dan"/>
+                        <outlet property="dayInfoView" destination="9Tm-33-sL3" id="PKe-Jq-dB1"/>
+                        <outlet property="selectCityButton" destination="jxB-hd-1wI" id="9Fm-Pq-miQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gaL-Ug-hBa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="446" y="428"/>
+            <point key="canvasLocation" x="444.375" y="427.81690140845069"/>
         </scene>
     </scenes>
     <resources>

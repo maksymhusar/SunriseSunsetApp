@@ -7,4 +7,5 @@ target 'SunriseSunsetApp' do
   pod 'Alamofire'
   pod 'SwiftyJSON'
   pod 'DateTimePicker'
+  pod 'GooglePlaces'
 end
