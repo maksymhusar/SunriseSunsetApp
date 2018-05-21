@@ -30,7 +30,7 @@ extension SunriseSunsetEndpoint: Endpoint {
         var params: [String: Any]?
         switch self {
         case .info(let latitude, let longitude, let date):
-            params = ["lat": latitude, "lng": longitude]
+            params = ["lat": latitude, "lng": longitude, "formatted": 0]
             if let date = date {
                 params?["date"] = date.toString()
             }

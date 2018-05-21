@@ -29,8 +29,7 @@ struct NetworkService {
         
         Alamofire.request(baseURL + endpoint.path,
                           method: endpoint.method,
-                          parameters: endpoint.parameters,
-                          encoding: JSONEncoding.default).responseJSON(queue: DispatchQueue.global()) { networkResponse in
+                          parameters: endpoint.parameters).responseJSON(queue: DispatchQueue.global()) { networkResponse in
                             completionHandler?(networkResponse.result)
         }
     }
