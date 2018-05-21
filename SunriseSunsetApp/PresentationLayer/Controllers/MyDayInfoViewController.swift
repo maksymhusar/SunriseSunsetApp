@@ -8,6 +8,7 @@
 
 import UIKit
 import DateTimePicker
+import CoreLocation
 
 class MyDayInfoViewController: UIViewController {
     
@@ -20,8 +21,12 @@ class MyDayInfoViewController: UIViewController {
     
     private var selectedDate = Date() {
         didSet {
+            resetTimeLabels()
             loadInfoByDateAndLocation()
         }
+    }
+    private var currentLocation: CLLocationCoordinate2D? {
+        didSet { loadInfoByDateAndLocation() }
     }
     
     override func viewDidLoad() {
@@ -29,16 +34,18 @@ class MyDayInfoViewController: UIViewController {
         logoImageView.layer.cornerRadius = logoImageView.bounds.height / 2.0
         changeDateButton.layer.cornerRadius = changeDateButton.bounds.height / 2.0
         changeDateButton.isHidden = true
+        loadInfoByDateAndLocation()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        loadInfoByDateAndLocation()
+        requestCurrentLocation()
     }
     
     private func loadInfoByDateAndLocation() {
-        setupInitialState()
-        if let currentLocation = LocationManager.instance.currentLocation {
+        dateLabel.text = selectedDate.toString()
+        changeDateButton.isHidden = true
+        if let currentLocation = currentLocation {
             activityIndicator.startAnimating()
             DataManager.instance.dayInfo(by: currentLocation, date: selectedDate) { [weak self] loadedInfo in
                 self?.activityIndicator.stopAnimating()
@@ -47,17 +54,12 @@ class MyDayInfoViewController: UIViewController {
                 self?.sunriseTimeLabel.text = loadedInfo?.sunrise.toString(format: .timeOnly)
             }
         } else {
-            activityIndicator.startAnimating()
-            LocationManager.instance.requestLocation { [weak self] error in
-                self?.activityIndicator.stopAnimating()
-                if error == nil {
-                    self?.loadInfoByDateAndLocation()
-                }
-            }
+            requestCurrentLocation()
         }
     }
     
-    @IBAction func changeDatePressed(_ sender: Any) {
+    // MARK: - Private methods
+    @IBAction private func changeDatePressed(_ sender: Any) {
         let minimumDate = Calendar.current.date(bySettingHour: 0, minute: 0, second: 0, of: Date())
         let picker = DateTimePicker.show(selected: selectedDate, minimumDate: minimumDate)
         picker.dateFormat = "dd/MM/YYYY"
@@ -67,11 +69,18 @@ class MyDayInfoViewController: UIViewController {
         }
     }
     
-    private func setupInitialState() {
-        dateLabel.text = selectedDate.toString()
-        changeDateButton.isHidden = true
+    private func resetTimeLabels() {
         sunsetTimeLabel.text = nil
         sunriseTimeLabel.text = nil
     }
     
+    private func requestCurrentLocation() {
+        activityIndicator.startAnimating()
+        LocationManager.instance.requestLocation { [weak self] error in
+            self?.activityIndicator.stopAnimating()
+            if error == nil {
+                self?.currentLocation = LocationManager.instance.currentLocation
+            }
+        }
+    }
 }
