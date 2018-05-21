@@ -57,6 +57,12 @@
                                     <constraint firstAttribute="height" constant="80" id="R5S-gg-S0e"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Location Info" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jZb-a7-EBq">
+                                <rect key="frame" x="20" y="30" width="280" height="21.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -65,11 +71,14 @@
                             <constraint firstItem="fJF-aD-T0E" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="7KP-Zh-jch"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fJF-aD-T0E" secondAttribute="trailing" constant="20" id="7qc-fG-pPA"/>
                             <constraint firstItem="4I6-mg-16t" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Cjj-bs-tzp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jZb-a7-EBq" secondAttribute="trailing" constant="20" id="JTX-zm-rrM"/>
+                            <constraint firstItem="jZb-a7-EBq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Mcs-io-FOA"/>
                             <constraint firstItem="4wi-Kz-C8l" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UK6-OU-KZW"/>
                             <constraint firstItem="4I6-mg-16t" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.5" id="Wpp-ix-Tn2"/>
                             <constraint firstItem="XDI-N2-EhO" firstAttribute="top" secondItem="fJF-aD-T0E" secondAttribute="bottom" constant="14" id="ZkD-fK-DAk"/>
                             <constraint firstItem="3Bf-G9-b07" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ikd-4f-IwA"/>
                             <constraint firstItem="XDI-N2-EhO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pjU-sp-lZm"/>
+                            <constraint firstItem="jZb-a7-EBq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="uLP-S4-ddO"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="XDI-N2-EhO" secondAttribute="bottom" constant="20" id="uYl-yv-WHZ"/>
                             <constraint firstItem="fJF-aD-T0E" firstAttribute="top" secondItem="4wi-Kz-C8l" secondAttribute="bottom" constant="14" id="viP-th-HTf"/>
                         </constraints>
@@ -118,7 +127,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Tm-33-sL3" customClass="DayInfoView" customModule="SunriseSunsetApp" customModuleProvider="target">
-                                <rect key="frame" x="20" y="220" width="280" height="80"/>
+                                <rect key="frame" x="20" y="219.5" width="280" height="80"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="6hu-bq-1cy"/>
@@ -166,13 +175,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selected City Timezone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lN1-0X-4Kj">
-                                <rect key="frame" x="61.5" y="313.5" width="181.5" height="20.5"/>
+                                <rect key="frame" x="61.5" y="313" width="181.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="pYU-dT-Dtt">
-                                <rect key="frame" x="251" y="308" width="51" height="31"/>
+                                <rect key="frame" x="251" y="307.5" width="51" height="31"/>
                                 <color key="onTintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="selectedCityTimezoneValueChanged:" destination="L6g-D7-n5c" eventType="valueChanged" id="h7v-kq-Pks"/>
