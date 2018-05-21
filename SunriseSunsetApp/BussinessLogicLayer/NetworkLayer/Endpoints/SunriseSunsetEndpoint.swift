@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 
 enum SunriseSunsetEndpoint {
-    case info(latitude: Double, longitude: Double, date: Date?)
+    case info(latitude: Double, longitude: Double, date: Date)
 }
 
 // MARK: Endpoint implementation
@@ -30,10 +30,10 @@ extension SunriseSunsetEndpoint: Endpoint {
         var params: [String: Any]?
         switch self {
         case .info(let latitude, let longitude, let date):
-            params = ["lat": latitude, "lng": longitude, "formatted": 0]
-            if let date = date {
-                params?["date"] = date.toString()
-            }
+            params = ["lat": latitude,
+                      "lng": longitude,
+                      "date": date.toString(),
+                      "formatted": 0]
         }
         return params
     }

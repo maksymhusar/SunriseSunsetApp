@@ -11,6 +11,7 @@ import Foundation
 enum DateFormat: String {
     case fullDate = "yyyy-MM-dd'T'HH:mm:sssZ"
     case dateWithoutTime = "yyyy-MM-dd"
+    case timeOnly = "HH:mm"
 }
 
 extension Date {
